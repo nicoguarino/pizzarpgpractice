@@ -6,7 +6,19 @@ class Overworld {
   }
 
 
+  startGameLoop() {
+    const step = () => {
+      requestAnimationFrame(() => {
+        step();
+      })
+    }
+    step();
+  }
+
   init() {
+
+    this.startGameLoop();
+
     const image = new Image();
 
     image.onload = () => {
