@@ -18,7 +18,9 @@ class Overworld {
 
       //Draw game objects
       Object.values(this.map.gameObjects).forEach(object => {
-        object.x += 1;
+        object.update({
+          
+        });
         object.sprite.draw(this.ctx);
       })
 
