@@ -30,7 +30,7 @@ class Sprite {
       'walk-up': [[1, 2], [0, 2], [3, 2], [0, 2]],
       'walk-left': [[1, 3], [0, 3], [3, 3], [0, 3]],
     }
-    this.currentAnimation = 'walk-down'; // config.currentAnimation || 'idle-down';
+    this.currentAnimation = 'idle-right'; // config.currentAnimation || 'idle-down';
     this.currentAnimationFrame = 0;
 
     this.animationFrameLimit = config.animationFrameLimit || 16;
@@ -42,6 +42,14 @@ class Sprite {
 
   get frame() {
     return this.animations[this.currentAnimation][this.currentAnimationFrame];
+  }
+
+  setAnimation(key) {
+    if (this.currentAnimation !== key) {
+      this.currentAnimation = key;
+      this.currentAnimationFrame = 0;
+      this.animationFrameProgress = this.animationFrameLimit;
+    }
   }
 
   updateAnimationProgress() {
