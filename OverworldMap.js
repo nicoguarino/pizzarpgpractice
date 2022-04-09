@@ -21,6 +21,11 @@ class OverworldMap {
       this.upperImage,
       utils.withGrid(10.5) - cameraPerson.x, utils.withGrid(6) - cameraPerson.y)
   }
+
+  isSpaceTaken(currentX, currentY, direction) {
+    const { x, y } = utils.nextPosition(currentX, currentY, direction);
+    return this.walls[`${x}, ${y}`] || false;
+  }
 }
 
 window.OverworldMaps = {
@@ -41,10 +46,10 @@ window.OverworldMaps = {
     },
     walls: {
       // "16,16": true,
-      [utils.asGridCoord(7, 6)] : true,
-      [utils.asGridCoord(8, 6)] : true,
-      [utils.asGridCoord(7, 7)] : true,
-      [utils.asGridCoord(8, 7)] : true,
+      [utils.asGridCoord(7, 6)]: true,
+      [utils.asGridCoord(8, 6)]: true,
+      [utils.asGridCoord(7, 7)]: true,
+      [utils.asGridCoord(8, 7)]: true,
     }
   },
 
