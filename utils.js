@@ -14,11 +14,11 @@ const utils = {
     if (direction === 'left') {
       x -= size;
     } else if (direction === 'right') {
-      x -= size;
+      x += size;
     } else if (direction === 'up') {
       y -= size;
     } else if (direction === 'down') {
-      y -= size;
+      y += size;
     }
     return { x, y };
   }
