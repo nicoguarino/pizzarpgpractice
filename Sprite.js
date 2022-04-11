@@ -33,7 +33,7 @@ class Sprite {
     this.currentAnimation = 'idle-right'; // config.currentAnimation || 'idle-down';
     this.currentAnimationFrame = 0;
 
-    this.animationFrameLimit = config.animationFrameLimit || 6;
+    this.animationFrameLimit = config.animationFrameLimit || 8;
     this.animationFrameProgress = this.animationFrameLimit;
 
     // Reference the game object
@@ -70,7 +70,7 @@ class Sprite {
 
   draw(ctx, cameraPerson) {
     const x = this.gameObject.x - 8 + utils.withGrid(10.5) - cameraPerson.x;
-    const y = this.gameObject.y - 16 + utils.withGrid(6) - cameraPerson.y;
+    const y = this.gameObject.y - 18 + utils.withGrid(6) - cameraPerson.y;
 
     this.isShadowLoaded && ctx.drawImage(this.shadow, x, y);
 
