@@ -9,7 +9,7 @@ class OverworldMap {
     this.upperImage = new Image();
     this.upperImage.src = config.upperSrc;
 
-    this.isCutscenePlaying = true;
+    this.isCutscenePlaying = false;
   }
 
   drawLowerImage(ctx, cameraPerson) {
@@ -52,6 +52,9 @@ class OverworldMap {
     }
 
     this.isCutscenePlaying = false;
+
+    //Reset NPCs to do their idle behavior
+    Object.values(this.gameObjects).forEach(object => object.doBehaviorEvent(this))
   }
 
   addWall(x, y) {
@@ -104,7 +107,6 @@ window.OverworldMaps = {
       })
     },
     walls: {
-      // "16,16": true,
       [utils.asGridCoord(7, 6)]: true,
       [utils.asGridCoord(8, 6)]: true,
       [utils.asGridCoord(7, 7)]: true,
