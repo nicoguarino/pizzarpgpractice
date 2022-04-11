@@ -21,6 +21,7 @@ class OverworldEvent {
     const completeHandler = e => {
       if (e.detail.whoId === this.event.who) {
         document.removeEventListener('PersonWalkingComplete', completeHandler);
+        resolve();
       }
     }
 
