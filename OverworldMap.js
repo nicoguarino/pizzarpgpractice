@@ -66,7 +66,13 @@ window.OverworldMaps = {
       npcA: new Person({
         x: utils.withGrid(7),
         y: utils.withGrid(9),
-        src: '/images/characters/people/npc1.png'
+        src: '/images/characters/people/npc1.png',
+        behaviorLoop: [
+          { type: 'stand', direction: 'left', time: 800 },
+          { type: 'stand', direction: 'up', time: 800 },
+          { type: 'stand', direction: 'right', time: 1200 },
+          { type: 'stand', direction: 'up', time: 300 },
+        ]
       }),
       npcB: new Person({
         x: utils.withGrid(3),
@@ -75,7 +81,9 @@ window.OverworldMaps = {
         behaviorLoop: [
           { type: 'walk', direction: 'left' },
           { type: 'stand', direction: 'up', time: 800 },
-
+          { type: 'walk', direction: 'up' },
+          { type: 'walk', direction: 'right' },
+          { type: 'walk', direction: 'down' },
         ]
       })
     },

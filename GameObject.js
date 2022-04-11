@@ -9,15 +9,24 @@ class GameObject {
       gameObject: this,
       src: config.src || '/images/characters/people/hero.png',
     });
+
+    this.behaviorLoop = config.behaviorLoop || [];
+    this.behaviorLoopIndex = 0;
   }
 
-  mount (map) {
+  mount(map) {
     console.log('mounting!');
     this.isMounted = true;
     map.addWall(this.x, this.y);
+
+    //If we have a behavior, kick off after a short delay
+    setTimeout(() => {
+      this.doBehaviorEvent(map);
+    }, 10)
   }
 
   update() {
-
   }
+
+
 }
