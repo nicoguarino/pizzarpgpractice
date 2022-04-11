@@ -28,5 +28,11 @@ class GameObject {
   update() {
   }
 
+  doBehaviorEvent(map) {
+    let eventConfig = this.behaviorLoop[this.behaviorLoopIndex];
+    eventConfig.who = this.id;
+
+    const eventHandler = new OverworldEvent({ map, event: eventConfig });
+  }
 
 }
