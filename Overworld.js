@@ -54,6 +54,7 @@ class Overworld {
     this.startGameLoop();
 
     this.map.startCutscene([
+      // {type: 'textMessage', text: "This is my first cutscene demo!"},
       { who: 'hero', type: 'walk', direction: 'down' },
       { who: 'hero', type: 'walk', direction: 'down' },
       { who: 'npcA', type: 'walk', direction: 'left' },
