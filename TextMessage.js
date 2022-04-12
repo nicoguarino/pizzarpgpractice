@@ -15,6 +15,17 @@ class TextMessage {
       <button class="TextMessage_button">Next</button>
     `)
 
+    this.element.querySelector("button").addEventListener("click", () => {
+
+      //Close the text message
+      this.done();
+    })
+
+  }
+
+  done() {
+    this.element.remove();
+    this.onComplete();
   }
 
   init(container) {
