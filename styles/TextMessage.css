@@ -10,3 +10,19 @@
   border-top: var(--menu-border-color);
   color: var(--menu-font-color);
 }
+
+.TextMessage_p {
+  margin: 0;
+  font-size: 12px;
+}
+
+.TextMessage_button {
+  margin: 0;
+  font-size: 8px;
+  padding: 0;
+  -webkit-appearance: none;
+  background: none;
+  border: 0;
+  font-family: inherit;
+  cursor: pointer;
+}
