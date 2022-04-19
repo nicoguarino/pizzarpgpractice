@@ -106,7 +106,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: 'textMessage', text: "I'm busy...!" },
+              { type: 'textMessage', text: "I'm busy...!", faceHero: "npcA" },
               { type: 'textMessage', text: "Go away!" },
               { who: "hero", type: "walk", direction: "up" },
             ]
