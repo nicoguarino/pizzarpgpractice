@@ -131,6 +131,20 @@ window.OverworldMaps = {
       [utils.asGridCoord(8, 6)]: true,
       [utils.asGridCoord(7, 7)]: true,
       [utils.asGridCoord(8, 7)]: true,
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(7, 4)]: [
+        {
+          events: [
+            {who: "npcB", type: "walk", direction: "left"},
+            {who: "npcB", type: "stand", direction: "up", time: 500},
+            {type: "textMessage", text: "You can't be in there! Get OUT!"},
+            {who: "npcB", type: "walk", direction: "right"},
+            {who: "hero", type: "walk", direction: "down"},
+            {who: "hero", type: "walk", direction: "left"},
+          ]
+        }
+      ]
     }
   },
 
