@@ -99,6 +99,14 @@ window.OverworldMaps = {
           { type: 'stand', direction: 'up', time: 800 },
           { type: 'stand', direction: 'right', time: 1200 },
           { type: 'stand', direction: 'up', time: 300 },
+        ],
+        talking: [
+          {
+            events: [
+              { type: 'textMessage', text: "I'm busy...!" },
+              { type: 'textMessage', text: "Go away!" },
+            ]
+          }
         ]
       }),
       npcB: new Person({
