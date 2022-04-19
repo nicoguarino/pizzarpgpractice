@@ -108,6 +108,7 @@ window.OverworldMaps = {
             events: [
               { type: 'textMessage', text: "I'm busy...!" },
               { type: 'textMessage', text: "Go away!" },
+              { who: "hero", type: "walk", direction: "up" },
             ]
           }
         ]
