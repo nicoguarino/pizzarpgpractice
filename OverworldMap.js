@@ -114,16 +114,16 @@ window.OverworldMaps = {
         ]
       }),
       npcB: new Person({
-        x: utils.withGrid(3),
-        y: utils.withGrid(7),
+        x: utils.withGrid(8),
+        y: utils.withGrid(5),
         src: '/images/characters/people/npc2.png',
-        behaviorLoop: [
-          { type: 'walk', direction: 'left' },
-          { type: 'stand', direction: 'up', time: 800 },
-          { type: 'walk', direction: 'up' },
-          { type: 'walk', direction: 'right' },
-          { type: 'walk', direction: 'down' },
-        ]
+        // behaviorLoop: [
+        //   { type: 'walk', direction: 'left' },
+        //   { type: 'stand', direction: 'up', time: 800 },
+        //   { type: 'walk', direction: 'up' },
+        //   { type: 'walk', direction: 'right' },
+        //   { type: 'walk', direction: 'down' },
+        // ]
       })
     },
     walls: {
