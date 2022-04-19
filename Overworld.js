@@ -44,9 +44,17 @@ class Overworld {
     step();
   }
 
+  bindActionInput() {
+    new KeyPressListener("Enter", () => {
+      // Is there a person here to talk to?
+    })
+  }
+
   init() {
     this.map = new OverworldMap(window.OverworldMaps.DemoRoom);
     this.map.mountObjects();
+
+    this.bindActionInput();
 
     this.directionInput = new DirectionInput();
     this.directionInput.init();
