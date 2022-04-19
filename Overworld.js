@@ -46,9 +46,18 @@ class Overworld {
 
   bindActionInput() {
     new KeyPressListener("Enter", () => {
-      
+
       // Is there a person here to talk to?
       this.map.checkForActionCutscene();
+    })
+  }
+
+  bindHeroPositionCheck() {
+    document.addEventListener("PersonWalkingComplete", e => {
+      if (e.detail.whoId === "hero") {
+        // Hero's postion has changed
+        this.map.checkForFootstepCutscene()
+      }
     })
   }
 
@@ -57,6 +66,7 @@ class Overworld {
     this.map.mountObjects();
 
     this.bindActionInput();
+    this.bindHeroPositionCheck();
 
     this.directionInput = new DirectionInput();
     this.directionInput.init();
