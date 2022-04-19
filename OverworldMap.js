@@ -57,6 +57,10 @@ class OverworldMap {
     Object.values(this.gameObjects).forEach(object => object.doBehaviorEvent(this))
   }
 
+  checkForActionCutscene() {
+    
+  }
+
   addWall(x, y) {
     this.walls[`${x}, ${y}`] = true;
   }
