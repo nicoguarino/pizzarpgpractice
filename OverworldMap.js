@@ -1,7 +1,8 @@
 class OverworldMap {
   constructor(config) {
+    this.overworld = null;
     this.gameObjects = config.gameObjects;
-    this.cutsceneSpaces config.cutsceneSpaces;
+    this.cutsceneSpaces = config.cutsceneSpaces || {};
     this.walls = config.walls || {};
 
     this.lowerImage = new Image();
@@ -71,7 +72,10 @@ class OverworldMap {
 
   checkForFootstepCutscene() {
     const hero = this.gameObjects["hero"];
-    const match = this.cutsceneSpaces[ `${ hero.x },${hero.y}`]
+    const match = this.cutsceneSpaces[`${hero.x}, ${hero.y}`];
+    if (!this.isCutscenePlaying && match) {
+      this.startCutscene(match[0].events)
+    }
   }
 
   addWall(x, y) {
@@ -86,7 +90,7 @@ class OverworldMap {
     this.removeWall(wasX, wasY);
     const { x, y } = utils.nextPosition(wasX, wasY, direction);
     this.addWall(x, y);
-    
+
   }
 }
 
@@ -143,12 +147,12 @@ window.OverworldMaps = {
       [utils.asGridCoord(7, 4)]: [
         {
           events: [
-            {who: "npcB", type: "walk", direction: "left"},
-            {who: "npcB", type: "stand", direction: "up", time: 500},
-            {type: "textMessage", text: "You can't be in there! Get OUT!"},
-            {who: "npcB", type: "walk", direction: "right"},
-            {who: "hero", type: "walk", direction: "down"},
-            {who: "hero", type: "walk", direction: "left"},
+            { who: "npcB", type: "walk", direction: "left" },
+            { who: "npcB", type: "stand", direction: "up", time: 500 },
+            { type: "textMessage", text: "You can't be in there! Get OUT!" },
+            { who: "npcB", type: "walk", direction: "right" },
+            { who: "hero", type: "walk", direction: "down" },
+            { who: "hero", type: "walk", direction: "left" },
           ]
         }
       ]

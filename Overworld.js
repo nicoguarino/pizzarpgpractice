@@ -55,11 +55,12 @@ class Overworld {
   bindHeroPositionCheck() {
     document.addEventListener("PersonWalkingComplete", e => {
       if (e.detail.whoId === "hero") {
-        // Hero's postion has changed
+        //Hero's position has changed
         this.map.checkForFootstepCutscene()
       }
     })
   }
+
 
   init() {
     this.map = new OverworldMap(window.OverworldMaps.DemoRoom);
@@ -84,7 +85,7 @@ class Overworld {
     //   { who: 'npcA', type: 'walk', direction: 'left' },
     //   { who: 'npcA', type: 'walk', direction: 'left' },
     //   { who: 'npcA', type: 'stand', direction: 'up', time: 800 },
-      
+
     // ])
 
   }
