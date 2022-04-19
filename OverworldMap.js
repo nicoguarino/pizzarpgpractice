@@ -1,6 +1,7 @@
 class OverworldMap {
   constructor(config) {
     this.gameObjects = config.gameObjects;
+    this.cutsceneSpaces config.cutsceneSpaces;
     this.walls = config.walls || {};
 
     this.lowerImage = new Image();
@@ -68,6 +69,11 @@ class OverworldMap {
     }
   }
 
+  checkForFootstepCutscene() {
+    const hero = this.gameObjects["hero"];
+    const match = this.cutsceneSpaces[ `${ hero.x },${hero.y}`]
+  }
+
   addWall(x, y) {
     this.walls[`${x}, ${y}`] = true;
   }
@@ -80,6 +86,7 @@ class OverworldMap {
     this.removeWall(wasX, wasY);
     const { x, y } = utils.nextPosition(wasX, wasY, direction);
     this.addWall(x, y);
+    
   }
 }
 
