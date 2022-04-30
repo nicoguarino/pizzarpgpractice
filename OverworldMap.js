@@ -171,17 +171,17 @@ window.OverworldMaps = {
     upperSrc: '/images/maps/KitchenUpper.png',
     gameObjects: {
       hero: new Person({
-        x: 3,
-        y: 5,
+        x: utils.withGrid(3),
+        y: utils.withGrid(5),
       }),
       npcA: new Person({
-        x: 9,
-        y: 6,
+        x: utils.withGrid(9),
+        y: utils.withGrid(6),
         src: '/images/characters/people/npc2.png'
       }),
       npcB: new Person({
-        x: 10,
-        y: 8,
+        x: utils.withGrid(10),
+        y: utils.withGrid(8),
         src: '/images/characters/people/npc3.png'
       }),
     }
