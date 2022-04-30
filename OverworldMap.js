@@ -171,6 +171,7 @@ window.OverworldMaps = {
     upperSrc: '/images/maps/KitchenUpper.png',
     gameObjects: {
       hero: new Person({
+        isPlayerControlled: true,
         x: utils.withGrid(5),
         y: utils.withGrid(5),
       }),
