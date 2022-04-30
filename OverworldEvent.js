@@ -61,6 +61,7 @@ class OverworldEvent {
     message.init(document.querySelector(".game-container"))
   }
 
+  // takes in event to swap map at coordinates
   changeMap(resolve) {
     this.map.overworld.startMap(window.OverworldMaps[this.event.map]);
     resolve();
