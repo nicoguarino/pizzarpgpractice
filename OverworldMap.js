@@ -159,31 +159,32 @@ window.OverworldMaps = {
       [utils.asGridCoord(5, 10)]: [
         {
           events: [
-            { type: "changeMap", map: "Kitchen"}
+            { type: "changeMap", map: "Kitchen" }
           ]
         }
       ]
-    },
+    }
+  },
 
-    Kitchen: {
-      lowerSrc: '/images/maps/KitchenLower.png',
-      upperSrc: '/images/maps/KitchenUpper.png',
-      gameObjects: {
-        hero: new GameObject({
-          x: 3,
-          y: 5,
-        }),
-        npcA: new GameObject({
-          x: 9,
-          y: 6,
-          src: '/images/characters/people/npc2.png'
-        }),
-        npcB: new GameObject({
-          x: 10,
-          y: 8,
-          src: '/images/characters/people/npc3.png'
-        }),
-      }
-    },
+  Kitchen: {
+    lowerSrc: '/images/maps/KitchenLower.png',
+    upperSrc: '/images/maps/KitchenUpper.png',
+    gameObjects: {
+      hero: new Person({
+        x: 3,
+        y: 5,
+      }),
+      npcA: new Person({
+        x: 9,
+        y: 6,
+        src: '/images/characters/people/npc2.png'
+      }),
+      npcB: new Person({
+        x: 10,
+        y: 8,
+        src: '/images/characters/people/npc3.png'
+      }),
+    }
+  },
 
-  }
+}
