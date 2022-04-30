@@ -60,6 +60,10 @@ class Overworld {
       }
     })
   }
+  
+  startMap() {
+    
+  }
 
 
   init() {
