@@ -64,13 +64,13 @@ class OverworldEvent {
   // takes in event to swap map at coordinates
   changeMap(resolve) {
 
-    const SceneTransition = new SceneTransition();
-    SceneTransition.init(document.querySelector(".game-container"), () => {
-      
-    });
+    const sceneTransition = new SceneTransition();
+    sceneTransition.init(document.querySelector(".game-container"), () => {
+      this.map.overworld.startMap(window.OverworldMaps[this.event.map]);
+      resolve();
 
-    this.map.overworld.startMap(window.OverworldMaps[this.event.map]);
-    resolve();
+      sceneTransition.fadeOut();
+    });
   }
 
   init() {
