@@ -7,4 +7,11 @@ class RevealingText {
     this.timeout = null;
     this.isDone = false;
   }
+
+  init() {
+    let characters = [];
+    this.text.split("").forEach(character => {
+      let span = document.createElement("span");
+    })
+  }
 }
