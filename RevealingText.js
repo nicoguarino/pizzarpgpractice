@@ -9,7 +9,16 @@ class RevealingText {
   }
 
   revealOneCharacter(list) {
-    
+    const next = list.splice(0, 1)[0];
+    next.span.classList.add("revealed");
+
+    if (list.length > 0) {
+      this.timeout = setTimeout(() => {
+        this.revealOneCharacter(list)
+      }, next.delayAfter);
+    } else {
+      this.isDone = true;
+    }
   }
 
   init() {
