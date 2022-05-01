@@ -80,7 +80,8 @@ class Overworld {
     this.startGameLoop();
 
     this.map.startCutscene([
-      {type: 'textMessage', text: "WHY HELLO THERE!"},
+      { type: "changeMap", map: "DemoRoom" }
+      // {type: 'textMessage', text: "WHY HELLO THERE!"},
     ])
 
   }
