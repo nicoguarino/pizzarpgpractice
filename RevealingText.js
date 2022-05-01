@@ -21,6 +21,10 @@ class RevealingText {
     }
   }
 
+  warpToDone() {
+    
+  }
+
   init() {
     let characters = [];
     this.text.split("").forEach(character => {
