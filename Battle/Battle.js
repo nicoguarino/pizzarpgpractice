@@ -4,10 +4,13 @@ class Battle {
   }
 
   createElement() {
-
+    this.element = document.createElement("div");
+    this.element.classList.add("Battle");
+    this.element.innerHTML = (`
+    `)
   }
 
-  init() {
-    
+  init(container) {
+
   }
 }
