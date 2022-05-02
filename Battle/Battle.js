@@ -10,7 +10,7 @@ class Battle {
     <div class="Battle_hero">
       <img src="${'/images/characters/people/hero.png'} alt="Hero" />
     </div>
-    
+
     <div class="Battle_enemy">
       <img src="${'/images/characters/people/npc3.png'} alt="Enemy" />
     </div>
@@ -18,6 +18,7 @@ class Battle {
   }
 
   init(container) {
-
+    this.createElement();
+    container.appendChild(this.element);
   }
 }
