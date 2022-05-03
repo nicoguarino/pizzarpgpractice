@@ -3,7 +3,11 @@ class Combatant {
 
   }
 
-  init(){
+  createElement() {
     
+  }
+
+  init(){
+
   }
 }
