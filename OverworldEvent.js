@@ -74,7 +74,12 @@ class OverworldEvent {
   }
 
   battle(resolve) {
-    
+    const battle = new this.Battle({
+      onComplete: () => {
+        resolve();
+      }
+    })
+    battle.init(document.querySelector(".game-container"));
   }
 
   init() {
