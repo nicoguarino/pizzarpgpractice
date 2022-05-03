@@ -74,7 +74,7 @@ class OverworldEvent {
   }
 
   battle(resolve) {
-    const battle = new this.Battle({
+    const battle = new Battle({
       onComplete: () => {
         resolve();
       }
