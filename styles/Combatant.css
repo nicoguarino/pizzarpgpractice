@@ -1,0 +1,6 @@
+.Combatant {
+  width:67px;
+  height: 14px;
+  background: url("/images/ui/SingleMemberDisplay.png") no-repeat no-repeat;
+  position: absolute;
+}
