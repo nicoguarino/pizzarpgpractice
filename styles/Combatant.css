@@ -4,3 +4,8 @@
   background: url("/images/ui/SingleMemberDisplay.png") no-repeat no-repeat;
   position: absolute;
 }
+
+.Combatant[data-team="player"] {
+  left: 46px;
+  top: 70px;
+}
