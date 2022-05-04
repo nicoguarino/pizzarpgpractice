@@ -3,6 +3,7 @@ class Battle {
     this.combatants = {
       "player1": new Combatant({
         ...Pizzas["s001"],
+        team: "player",
         hp: 50,
         maxHp: 50,
         xp: 0,
