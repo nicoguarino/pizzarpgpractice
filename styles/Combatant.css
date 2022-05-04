@@ -9,3 +9,8 @@
   left: 46px;
   top: 70px;
 }
+
+.Combatant[data-team="enemy"] {
+  top: 28px;
+  right: 77px;
+}
