@@ -30,3 +30,7 @@
   left: -11px;
   bottom: -7px;
 }
+
+.Battle .Combatant_character_crop {
+  display: none;
+}
