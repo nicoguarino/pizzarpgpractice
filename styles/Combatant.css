@@ -12,6 +12,9 @@
 .Battle .Combatant[data-active="false"] {
   opacity: 0;
 }
+.Battle .Combatant[data-active="true"] {
+  opacity: 1;
+}
 
 .Combatant[data-team="player"] {
   left: 46px;
