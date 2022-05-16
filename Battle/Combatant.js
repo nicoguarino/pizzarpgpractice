@@ -30,7 +30,7 @@ class Combatant {
   `);
   }
 
-  init() {
+  init(container) {
     this.createElement();
     container.appendChild(this.hudElement)
   }
