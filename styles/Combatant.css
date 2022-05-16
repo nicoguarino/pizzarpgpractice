@@ -102,3 +102,7 @@
   color: white;
   margin: 0;
 }
+
+.Combatant_status[data-status="saucy"] {
+  color: red;
+}
