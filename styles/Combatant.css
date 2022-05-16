@@ -47,3 +47,11 @@
  padding-right: 2px;
  margin: 0;
 }
+
+.Combatant_type {
+  position: absolute;
+  left: 3px;
+  top: -2px;
+  width: 16px;
+  height: 16px;
+}
