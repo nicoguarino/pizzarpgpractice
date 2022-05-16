@@ -106,3 +106,7 @@
 .Combatant_status[data-status="saucy"] {
   color: red;
 }
+
+.Combatant_status[data-status="drop"] {
+  background: #582a79;
+}
