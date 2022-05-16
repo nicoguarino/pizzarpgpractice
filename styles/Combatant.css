@@ -75,3 +75,18 @@
   width: 26px;
   height: 2px;
 }
+
+.Combatant_level {
+  position: absolute;
+  font-size: 12px;
+  right: 2px;
+  top: -1px;
+  width: 17px;
+  height: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8c594;
+  border: 1px solid #a48465;
+  margin: 0;
+}
