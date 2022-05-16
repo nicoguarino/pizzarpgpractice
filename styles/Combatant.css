@@ -5,6 +5,10 @@
   position: absolute;
 }
 
+.Battle .Combatant {
+  transform: scale(2);
+}
+
 .Combatant[data-team="player"] {
   left: 46px;
   top: 70px;
