@@ -14,3 +14,12 @@
   top: 28px;
   right: 77px;
 }
+
+.Combatant_character_crop {
+  position: absolute;
+  bottom: 1px;
+  left: 3px;
+  width: 22px;
+  height: 12px;
+  overflow: hidden;
+}
