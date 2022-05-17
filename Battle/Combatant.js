@@ -40,6 +40,7 @@ class Combatant {
   `);
 
     this.hpFills = this.hudElement.querySelectorAll(".Combatant_life-container > rect");
+    this.xpFills = this.hudElement.querySelectorAll(".Combatant_xp-container > rect");
   }
 
   update(changes={}) {
@@ -49,6 +50,7 @@ class Combatant {
     });
 
     this.hpFills.forEach(rect => rect.style.width = `${this.hpPercent}%` )
+    this.xpFills.forEach(rect => rect.style.width = `${this.xpPercent}%` )
 
     this.hudElement.querySelector(".Combatant_level").innerText = this.level;
   }
