@@ -24,7 +24,7 @@ class Battle {
         hp: 50,
         maxHp: 50,
         xp: 30,
-        level: 4,
+        level: 1,
       }, this),
     }
   }

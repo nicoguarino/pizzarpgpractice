@@ -6,6 +6,11 @@ class Combatant {
     this.battle = battle;
   }
 
+  get hpPercent() {
+    const percent = this.hp / this.maxHp * 100;
+    return percent > 0 ? percent : 0;
+  }
+
   createElement() {
     this.hudElement = document.createElement("div");
     this.hudElement.classList.add("Combatant");
