@@ -33,6 +33,8 @@ class Combatant {
     </svg>
     <p class="Combatant_status"></p>
   `);
+
+    this.hpFills = this.hudElement.querySelectorAll(".Combatant_life-container > rect");
   }
 
   update(changes={}) {
