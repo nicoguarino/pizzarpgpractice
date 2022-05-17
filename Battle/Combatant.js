@@ -11,6 +11,11 @@ class Combatant {
     return percent > 0 ? percent : 0;
   }
 
+  get xpPercent() {
+    return  this.xp / this.maxXp * 100;
+    
+  }
+
   createElement() {
     this.hudElement = document.createElement("div");
     this.hudElement.classList.add("Combatant");

@@ -6,7 +6,7 @@ class Battle {
         team: "player",
         hp: 30,
         maxHp: 50,
-        xp: 0,
+        xp: 75,
         maxXp: 100,
         level: 1,
         status: null,
