@@ -35,6 +35,8 @@ class Combatant {
     Object.keys(changes).forEach(key => {
       this[key] = changes[key]
     });
+
+    this.hudElement.querySelector(".Combatant_level").innerText = this.level;
   }
 
   init(container) {
