@@ -42,5 +42,6 @@ class Combatant {
   init(container) {
     this.createElement();
     container.appendChild(this.hudElement)
+    this.update();
   }
 }
