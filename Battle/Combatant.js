@@ -16,6 +16,10 @@ class Combatant {
     
   }
 
+  get isActive() {
+    
+  }
+
   createElement() {
     this.hudElement = document.createElement("div");
     this.hudElement.classList.add("Combatant");
