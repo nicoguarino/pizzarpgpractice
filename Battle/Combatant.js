@@ -43,6 +43,8 @@ class Combatant {
     <p class="Combatant_status"></p>
   `);
 
+    this.pizzaElement = document.createElement("img");
+
     this.hpFills = this.hudElement.querySelectorAll(".Combatant_life-container > rect");
     this.xpFills = this.hudElement.querySelectorAll(".Combatant_xp-container > rect");
   }
@@ -59,7 +61,7 @@ class Combatant {
     this.xpFills.forEach(rect => rect.style.width = `${this.xpPercent}%` )
 
     this.hudElement.querySelector(".Combatant_level").innerText = this.level;
-    
+
   }
 
   init(container) {
