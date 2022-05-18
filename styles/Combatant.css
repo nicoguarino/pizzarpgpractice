@@ -121,3 +121,9 @@
 .Combatant_status[data-status="clumsy"] {
   background: #582a79;
 }
+
+.Pizza {
+  position: absolute;
+  transform: scale(2);
+  background: url(/images/characters/pizzas/pizza-shadow.png) no-repeat no-repeat;
+}
