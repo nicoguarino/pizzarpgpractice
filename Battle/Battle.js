@@ -30,6 +30,10 @@ class Battle {
         level: 1,
       }, this),
     }
+    this.activeCombatants = {
+      player: "player1",
+      enemy: "enemy2",
+    }
   }
 
   createElement() {
