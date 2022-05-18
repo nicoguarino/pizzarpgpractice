@@ -12,8 +12,8 @@ class Combatant {
   }
 
   get xpPercent() {
-    return  this.xp / this.maxXp * 100;
-    
+    return this.xp / this.maxXp * 100;
+
   }
 
   get isActive() {
@@ -44,12 +44,16 @@ class Combatant {
   `);
 
     this.pizzaElement = document.createElement("img");
+    this.pizzaElement.classList.add("Pizza");
+    this.pizzaElement.setAttribute("src", this.src);
+    this.pizzaElement.setAttribute("alt", this.name);
+    this.pizzaElement.setAttribute("data-team", this.team);
 
     this.hpFills = this.hudElement.querySelectorAll(".Combatant_life-container > rect");
     this.xpFills = this.hudElement.querySelectorAll(".Combatant_xp-container > rect");
   }
 
-  update(changes={}) {
+  update(changes = {}) {
     //Update anything incoming
     Object.keys(changes).forEach(key => {
       this[key] = changes[key]
@@ -57,8 +61,8 @@ class Combatant {
 
     this.hudElement.setAttribute("data-active", this.isActive);
 
-    this.hpFills.forEach(rect => rect.style.width = `${this.hpPercent}%` )
-    this.xpFills.forEach(rect => rect.style.width = `${this.xpPercent}%` )
+    this.hpFills.forEach(rect => rect.style.width = `${this.hpPercent}%`)
+    this.xpFills.forEach(rect => rect.style.width = `${this.xpPercent}%`)
 
     this.hudElement.querySelector(".Combatant_level").innerText = this.level;
 
