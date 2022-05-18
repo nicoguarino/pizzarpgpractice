@@ -53,10 +53,13 @@ class Combatant {
       this[key] = changes[key]
     });
 
+    this.hudElement.setAttribute("data-active", this.isActive);
+
     this.hpFills.forEach(rect => rect.style.width = `${this.hpPercent}%` )
     this.xpFills.forEach(rect => rect.style.width = `${this.xpPercent}%` )
 
     this.hudElement.querySelector(".Combatant_level").innerText = this.level;
+    
   }
 
   init(container) {
