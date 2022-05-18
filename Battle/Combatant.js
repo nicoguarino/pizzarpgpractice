@@ -17,7 +17,7 @@ class Combatant {
   }
 
   get isActive() {
-    
+    return this.battle.activeCombatants[this.team] === this.id;
   }
 
   createElement() {
