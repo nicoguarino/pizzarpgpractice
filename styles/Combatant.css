@@ -127,3 +127,8 @@
   transform: scale(2);
   background: url(/images/characters/pizzas/pizza-shadow.png) no-repeat no-repeat;
 }
+
+.Pizza[data-team="player"] {
+  bottom: 73px;
+  left: 51px;
+}
