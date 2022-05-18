@@ -70,7 +70,8 @@ class Combatant {
 
   init(container) {
     this.createElement();
-    container.appendChild(this.hudElement)
+    container.appendChild(this.hudElement);
+    container.appendChild(this.pizzaElement);
     this.update();
   }
 }
