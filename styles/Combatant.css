@@ -141,3 +141,7 @@
 .Pizza[data-active="false"] {
   opacity: 0;
 }
+
+.Pizza[data-active="true"] {
+  opacity: 1;
+}
