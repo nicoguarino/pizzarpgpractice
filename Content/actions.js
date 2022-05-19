@@ -3,7 +3,8 @@ window.Actions = {
     name: "Whomp!",
     success:[ 
       {type: "textMessage", text: "Something Happened!"},
-      {type: "textMessage", text: "Something happened!"},
+      // {type: "animation", animation: "Something goes here"},
+      // {type: "stateChange", damage: 10}
     ]
   }
 }
