@@ -1,3 +1,5 @@
 window.Actions = {
-  
+  damage1: {
+    
+  }
 }
