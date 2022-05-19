@@ -62,6 +62,7 @@ class Combatant {
     // Update active flag to show the correct pizza & hud
     this.hudElement.setAttribute("data-active", this.isActive);
     this.pizzaElement.setAttribute("data-active", this.isActive);
+  
 
     // Update HP and XP percent fills
     this.hpFills.forEach(rect => rect.style.width = `${this.hpPercent}%`)
