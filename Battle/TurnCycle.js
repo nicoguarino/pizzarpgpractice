@@ -4,4 +4,12 @@ class TurnCycle {
     this.onNewEvent = onNewEvent;
     this.currentTeam = "player"; // or "enemy"
   }
+
+  async turn() {
+
+  }
+
+  init() {
+    
+  }
 }
