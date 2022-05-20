@@ -4,7 +4,11 @@ class BattleEvent {
     this.battle = battle;
   }
 
-  init() {
+  textMessage() {
     
+  }
+
+  init() {
+
   }
 }
