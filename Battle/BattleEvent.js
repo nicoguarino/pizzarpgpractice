@@ -5,10 +5,10 @@ class BattleEvent {
   }
 
   textMessage() {
-    
+
   }
 
-  init() {
-
+  init(resolve) {
+    this[this.event.type](resolve);
   }
 }
