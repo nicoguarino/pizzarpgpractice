@@ -59,5 +59,15 @@ class Battle {
       combatant.id = key;
       combatant.init(this.element)
     });
+
+    this.turnCycle = new TurnCycle({
+      battle: this,
+      onNewEvent: event => {
+        return new Promise(resolve => {
+          const BattleEvent = new BattleEvent(event, this)
+          BattleEvent.init(resolve);
+        })
+      }
+    })
   }
 }
