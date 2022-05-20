@@ -1,5 +1,10 @@
 class BattleEvent {
-  constructor() {
+  constructor(event, battle) {
+    this.event = event;
+    this.battle = battle;
+  }
+
+  init() {
     
   }
 }
