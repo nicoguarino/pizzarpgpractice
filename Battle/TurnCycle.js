@@ -10,6 +10,9 @@ class TurnCycle {
   }
 
   init() {
-    
+    await this.onNewEvent({
+      type: "textMessage",
+      text: "The battle is starting!"
+    })
   }
 }
