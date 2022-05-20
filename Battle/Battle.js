@@ -64,10 +64,11 @@ class Battle {
       battle: this,
       onNewEvent: event => {
         return new Promise(resolve => {
-          const BattleEvent = new BattleEvent(event, this)
-          BattleEvent.init(resolve);
+          const battleEvent = new BattleEvent(event, this)
+          battleEvent.init(resolve);
         })
       }
     })
+    this.turnCycle.init();
   }
 }
