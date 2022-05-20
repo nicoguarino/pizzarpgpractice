@@ -4,8 +4,8 @@ class BattleEvent {
     this.battle = battle;
   }
 
-  textMessage() {
-
+  textMessage(resolve) {
+    console.log("A Message!");
   }
 
   init(resolve) {
