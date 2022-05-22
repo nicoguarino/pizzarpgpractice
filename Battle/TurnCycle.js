@@ -8,7 +8,7 @@ class TurnCycle {
   async turn() {
     // Get the caster
     const casterId = this.battle.activeCombatants[this.currentTeam];
-    
+    const caster = this.battle.combatants[casterId];
   }
 
    async init() {
