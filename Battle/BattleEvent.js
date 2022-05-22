@@ -11,6 +11,7 @@ class BattleEvent {
         resolve();
       }
     });
+    message.init(this.battle.element)
   }
 
   init(resolve) {
