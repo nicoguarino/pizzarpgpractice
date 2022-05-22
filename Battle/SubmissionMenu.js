@@ -5,7 +5,11 @@ class SubmissionMenu {
     this.onComplete = onComplete;
   }
 
-  init(container) {
+  decide() {
+    
+  }
 
+  init(container) {
+    this.decide()
   }
 }
