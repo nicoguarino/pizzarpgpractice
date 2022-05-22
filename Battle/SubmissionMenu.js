@@ -1,0 +1,9 @@
+class SubmissionMenu {
+  constructor() {
+
+  }
+
+  init() {
+    
+  }
+}
