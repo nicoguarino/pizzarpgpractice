@@ -1,9 +1,10 @@
 class SubmissionMenu {
-  constructor() {
-
+  constructor( {caster, onComplete}) {
+    this.caster = caster;
+    this.onComplete = onComplete;
   }
 
-  init() {
-    
+  init(container) {
+
   }
 }
