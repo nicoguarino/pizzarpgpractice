@@ -15,7 +15,14 @@ class BattleEvent {
   }
 
   submissionMenu (resolve) {
-    
+    const menu = new SubmissionMenu({
+      caster: this.event.caster,
+      enemy: this.event.enemy,
+      onComplete: submission => {
+        //submission {what move to use, who to use it on }
+        resolve(submission);
+      }
+    })
   }
 
   init(resolve) {

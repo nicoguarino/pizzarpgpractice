@@ -15,7 +15,8 @@ class TurnCycle {
 
     const submission = await this.onNewEvent({
       type: "submissionMenu",
-      caster
+      caster,
+      enemy
     })
   }
 
