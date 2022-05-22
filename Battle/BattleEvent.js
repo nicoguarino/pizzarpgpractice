@@ -14,6 +14,10 @@ class BattleEvent {
     message.init(this.battle.element)
   }
 
+  submissionMenu (resolve) {
+    
+  }
+
   init(resolve) {
     this[this.event.type](resolve);
   }
