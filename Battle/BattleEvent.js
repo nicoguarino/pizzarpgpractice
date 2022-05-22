@@ -23,6 +23,7 @@ class BattleEvent {
         resolve(submission);
       }
     })
+    menu.init(this.battle.element)
   }
 
   init(resolve) {
