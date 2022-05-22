@@ -9,6 +9,11 @@ class TurnCycle {
     // Get the caster
     const casterId = this.battle.activeCombatants[this.currentTeam];
     const caster = this.battle.combatants[casterId];
+
+    const submission = await this.onNewEvent({
+      type: "submissionMenu",
+      caster
+    })
   }
 
    async init() {
