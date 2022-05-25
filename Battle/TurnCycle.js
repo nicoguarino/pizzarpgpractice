@@ -20,6 +20,7 @@ class TurnCycle {
     })
 
     const resultingEvent = submission.action.success;
+
     for (let i = 0; i < resultingEvent.length; i++) {
       const event = {
         ...resultingEvent[i],
@@ -28,11 +29,12 @@ class TurnCycle {
         caster,
         target: submission.target,
       }
-      
+      await this.onNewEvent(event);
     }
+
   }
 
-   async init() {
+  async init() {
     await this.onNewEvent({
       type: "textMessage",
       text: "The battle is starting!"
