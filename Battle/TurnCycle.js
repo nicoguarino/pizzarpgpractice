@@ -18,6 +18,18 @@ class TurnCycle {
       caster,
       enemy
     })
+
+    const resultingEvent = submission.action.success;
+    for (let i = 0; i < resultingEvent.length; i++) {
+      const event = {
+        ...resultingEvent[i],
+        submission,
+        action: submission.action,
+        caster,
+        target: submission.target,
+      }
+      
+    }
   }
 
    async init() {
